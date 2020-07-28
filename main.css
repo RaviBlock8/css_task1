@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins;
+}
+
+ul {
+  list-style-type: none;
+  /* border: 1px solid black; */
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+  background: #60b4df;
+  height: 9vh;
+  z-index: 100;
+}
+
+section {
+  height: 91vh;
+  background: rgb(5, 88, 156);
+}
+
+.container {
+  max-width: 70vw;
+  padding: 0 7px;
+  margin: 0 auto;
+  /* background: #fff; */
+  height: 100%;
+  display: flex;
+}
+
+.logo-container {
+  flex: 1;
+  /* background: red; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.nav-btn {
+  flex: 3;
+  /* background: green; */
+  height: 100%;
+  display: flex;
+}
+
+.nav-links {
+  flex: 3;
+}
+.login {
+  flex: 1;
+  /* background: palevioletred; */
+}
+.nav-links > ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links > ul > li > a {
+  line-height: 3px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 0 10px;
+  display: flex;
+  height: 9vh;
+  align-items: center;
+  font-size: 15px;
+  transition: all 300ms;
+}
+
+.nav-links > ul > li > a:hover {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 10vw;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 300ms;
+  /* background: #fff; */
+}
+.dropdown-link {
+  position: relative;
+}
+.dropdown-link > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #60b4df;
+  padding: 5px 10px;
+  background: #fff;
+  transition: all 300ms;
+}
+
+.dropdown-link:not(:nth-last-child(1)) {
+  border-bottom: 1px solid #efefef;
+}
+
+.dropdown-link:hover > a {
+  background: #60b4df;
+  color: #fff;
+}
+
+.second {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+.second > ul {
+  padding: 0 7px;
+}
+
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown {
+  transform: translate(0, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
